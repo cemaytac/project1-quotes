@@ -27,17 +27,15 @@ adviceBtn.addEventListener('click', () => {
 })
 inspireBtn.addEventListener('click', () => {
   // promise
-  fetch("https://quotesondesign.com/wp-json/wp/v2/posts?_fields=")
+  fetch("https://api.quotable.io/random")
     // return promise
     .then((response) => {
       return response.json();
     })
-    // get advice from content array and push it into quote array
+    // get advice from object array and push it into quote array
     .then((data) => {
-      // let newInspire = {}
-      // newInspire.object.content = data.content
-      quotes.push(data.content);
-      console.log(data.content)
+      quotes.push(data.content, data.author);
+      console.log(data.content, data.author)
     })
     .catch((err) => {
       console.log(err)
