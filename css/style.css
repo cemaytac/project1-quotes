@@ -1,6 +1,7 @@
 .box {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 30px;
   width: 100%;
 }
@@ -10,4 +11,8 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
+}
+
+.card-body {
+  padding: 10;
 }
