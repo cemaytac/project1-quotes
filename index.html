@@ -14,6 +14,12 @@
 <body>
   <h1 id="name">Motivation Helper</h1>
   <h2>Do you need inspiration or advice?</h2>
+  <form action="/submissions.php" method="GET">
+    <label for="submission">Submit your quotes here!</label>
+    <input type="text" id="submission">
+    <input type="submit" value="Submit">
+  </form>
+
   <div class="buttons">
     <button class='btn' id='inspireButton'>Inspire Me!</button>
     <button class='btn' id='adviceButton'>I need some advice!</button>
@@ -21,7 +27,6 @@
   </div>
   <button class='btn' id='resetButton'>Reset</button>
   <div class='box' id='boxDiv'></div>
-
 
 </body>
 

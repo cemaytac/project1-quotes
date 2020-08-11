@@ -56,14 +56,15 @@ inspireBtn.addEventListener('click', () => {
     })
 })
 
+// reset button
 resetBtn.addEventListener('click', init)
 
 // functions
 
-function appendDiv(advice, content, author) {
-  let adviceDiv = document.createElement('div')
-  let inspireDiv = document.createElement('div')
-  adviceDiv.innerHTML = ` <div class='card' id='advice'>
+function appendDiv(advice) {
+  let mainDiv = document.createElement('div')
+  // let inspireDiv = document.createElement('div')
+  mainDiv.innerHTML = ` <div class='card' id='mDiv'>
   <div class='card-body'>
   <blockquote class='blockquote mb-0'>
   <p>${advice}</p>
@@ -71,18 +72,18 @@ function appendDiv(advice, content, author) {
     </div>
   </div>
   `
-  //   inspireDiv.innerHtml = ` <div class='card' id='inspire'>
-  // <div class='card-body'>
-  // <blockquote class='blockquote mb-0'>
-  // <p>${content}</p>
-  // <footer class="blockquote-footer">${author}</footer>
-  // </blockquote>
+  //   inspireDiv.innerHtml = ` 
+  //   <div class='card' id=''>
+  //     <div class='card-body'>
+  //       <blockquote class='blockquote mb-0'>
+  //         <p>${content}</p>
+  //       <footer class="blockquote-footer">${author}</footer>
+  //     </blockquote>
   //   </div>
   // </div>
-  // `
+  //   `
 
-  box.appendChild(adviceDiv)
-  box.appendChild(inspireDiv)
+  box.appendChild(mainDiv)
 }
 
 // to display everything on page 

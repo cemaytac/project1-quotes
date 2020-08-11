@@ -44,3 +44,9 @@ h2 {
 .card-body {
   padding: 30px;
 }
+
+input {
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+}
