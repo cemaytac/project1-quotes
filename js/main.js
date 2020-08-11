@@ -20,8 +20,9 @@ adviceBtn.addEventListener('click', () => {
     // get advice from slip array and push it into quote array
     .then((data) => {
       let newQuote = {}
-      newQuote.advice = data.slip.advice
-      quotes.push(newQuote.advice);
+      newQuote.quote = data.slip.advice
+      newQuote.author = 'Unknown'
+      quotes.push(newQuote.quote, newQuote.author);
       render();
     })
     .catch((err) => {
@@ -61,36 +62,26 @@ resetBtn.addEventListener('click', init)
 
 // functions
 
-function appendDiv(advice) {
+function appendDiv(quote, author) {
   let mainDiv = document.createElement('div')
   // let inspireDiv = document.createElement('div')
-  mainDiv.innerHTML = ` <div class='card' id='mDiv'>
+  mainDiv.innerHTML = ` <div class='card'>
   <div class='card-body'>
   <blockquote class='blockquote mb-0'>
-  <p>${advice}</p>
+  <p>${quote}</p>
+  <footer class="blockquote-footer">${author}</footer>
   </blockquote>
     </div>
   </div>
   `
-  //   inspireDiv.innerHtml = ` 
-  //   <div class='card' id=''>
-  //     <div class='card-body'>
-  //       <blockquote class='blockquote mb-0'>
-  //         <p>${content}</p>
-  //       <footer class="blockquote-footer">${author}</footer>
-  //     </blockquote>
-  //   </div>
-  // </div>
-  //   `
-
   box.appendChild(mainDiv)
 }
 
 // to display everything on page 
 function render() {
   box.innerHTML = '';
-  quotes.forEach((advice, content, author) => {
-    appendDiv(advice, content, author)
+  quotes.forEach((quote, author) => {
+    appendDiv(quote, author)
   })
 }
 

@@ -9,11 +9,10 @@ h2 {
 }
 
 .box {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   margin-top: 30px;
   width: 100%;
-  text-align: center;
 }
 
 .btn {
@@ -45,8 +44,9 @@ h2 {
   padding: 30px;
 }
 
-input {
+form {
   display: flex;
   justify-content: flex-end;
   text-align: center;
+  color: #030405;
 }
