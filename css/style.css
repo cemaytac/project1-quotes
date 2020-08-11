@@ -1,3 +1,13 @@
+body {
+  background-color: rgb(1, 75, 1);
+}
+
+h1,
+h2 {
+  text-align: center;
+  color: black;
+}
+
 .box {
   display: flex;
   justify-content: center;
@@ -6,7 +16,25 @@
   width: 100%;
 }
 
+.btn {
+  background-color: #00B0EF;
+  display: flex;
+  margin: 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#resetButton {
+  margin: auto;
+}
+
 .card {
+  display: flex;
+  justify-content: center;
   width: 95%;
   margin-left: auto;
   margin-right: auto;

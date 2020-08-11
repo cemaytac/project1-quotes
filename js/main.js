@@ -4,6 +4,7 @@ const box = document.getElementById('boxDiv')
 const inspireBtn = document.getElementById('inspireButton')
 const adviceBtn = document.getElementById('adviceButton')
 const luckyBtn = document.getElementById('luckyButton')
+const resetBtn = document.getElementById('resetButton')
 
 // Variables
 const quotes = [];
@@ -51,15 +52,16 @@ inspireBtn.addEventListener('click', () => {
 })
 
 luckyBtn.addEventListener('click', () => {
-  render();
+  console.log(quotes)
 })
+
+resetBtn.addEventListener('click', init)
 
 // functions
 
-
 function appendDiv(advice, content, author) {
   let adviceDiv = document.createElement('div')
-  let inspireDiv = document.createElement('div2')
+  let inspireDiv = document.createElement('div')
   adviceDiv.innerHTML = ` <div class='card' id='advice'>
   <div class='card-body'>
   <blockquote class='blockquote mb-0'>
@@ -82,7 +84,12 @@ function appendDiv(advice, content, author) {
 
 function render() {
   box.innerHTML = '';
-  quotes.forEach((advice) => {
-    appendDiv(advice)
+  quotes.forEach((advice, content, author) => {
+    appendDiv(advice, content, author)
   })
 }
+
+function init() {
+  box.innerHTML = '';
+}
+init();
