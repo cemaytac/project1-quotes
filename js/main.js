@@ -20,8 +20,8 @@ adviceBtn.addEventListener('click', () => {
     // get advice from slip array and push it into quote array
     .then((data) => {
       let newQuote = {}
-      newQuote.advice = data.advice
-      quotes.push(data.slip.advice);
+      newQuote.advice = data.slip.advice
+      quotes.push(newQuote.advice);
       render();
     })
     .catch((err) => {
@@ -48,7 +48,7 @@ inspireBtn.addEventListener('click', () => {
       let newQuote = {}
       newQuote.content = data.content
       newQuote.author = data.author
-      quotes.push(data.content, data.author);
+      quotes.push(newQuote.content, newQuote.author);
       render();
     })
     .catch((err) => {
@@ -56,7 +56,6 @@ inspireBtn.addEventListener('click', () => {
     })
 })
 
-luckyBtn.addEventListener('click', render)
 resetBtn.addEventListener('click', init)
 
 // functions
@@ -64,24 +63,23 @@ resetBtn.addEventListener('click', init)
 function appendDiv(advice, content, author) {
   let adviceDiv = document.createElement('div')
   let inspireDiv = document.createElement('div')
-  let luckyDiv = document.createElement('div')
   adviceDiv.innerHTML = ` <div class='card' id='advice'>
-  <div class='card-body-adv'>
+  <div class='card-body'>
   <blockquote class='blockquote mb-0'>
   <p>${advice}</p>
   </blockquote>
     </div>
   </div>
   `
-  inspireDiv.innerHtml = ` <div class='card' id='inspire'>
-<div class='card-body-insp'>
-<blockquote class='blockquote mb-0'>
-<p>${content}</p>
-<footer class="blockquote-footer">${author}</footer>
-</blockquote>
-  </div>
-</div>
-`
+  //   inspireDiv.innerHtml = ` <div class='card' id='inspire'>
+  // <div class='card-body'>
+  // <blockquote class='blockquote mb-0'>
+  // <p>${content}</p>
+  // <footer class="blockquote-footer">${author}</footer>
+  // </blockquote>
+  //   </div>
+  // </div>
+  // `
 
   box.appendChild(adviceDiv)
   box.appendChild(inspireDiv)
