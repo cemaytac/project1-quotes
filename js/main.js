@@ -60,21 +60,31 @@ inspireBtn.addEventListener('click', () => {
 
 // button should show random quote from either API 
 luckyBtn.addEventListener('click', () => {
-  luckyQuote();
-  render();
+  Promise.all([
+    fetch("https://api.quotable.io/random"),
+    fetch("https://api.adviceslip.com/advice")
+    // return promise
+  ]).then(async (responses) => {
+    try {
+      const data = await Promise.all(responses.map(function (response) {
+        return response.json()
+      }))
+      let newQuote = {}
+      newQuote.quote = data.advice
+      // newQuote.quote = data.content
+      // newQuote.author = data.author
+      quotes.push(newQuote)
+      console.log(newQuote)
+    } catch (err) {
+      console.log(err)
+    }
+  })
 })
 
 // reset button
 resetBtn.addEventListener('click', init)
 
 // functions
-
-// function luckyQuote() {
-//   let newQuote = {}
-//   quotes.push(newQuote.advice, newQuote.content, newQuote.author)
-//   quotes[Math.floor(Math.random() * quotes.length)]
-//   console.log(newQuote)
-// }
 
 function appendDiv(quote, author) {
   let mainDiv = document.createElement('div')
