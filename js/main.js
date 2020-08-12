@@ -7,7 +7,7 @@ const luckyBtn = document.getElementById('luckyButton')
 const resetBtn = document.getElementById('resetButton')
 
 // Variables
-const quotes = [];
+const quotes = []
 
 // event listeners
 adviceBtn.addEventListener('click', () => {
@@ -21,8 +21,8 @@ adviceBtn.addEventListener('click', () => {
     .then((data) => {
       let newQuote = {}
       newQuote.quote = data.slip.advice
-      newQuote.author = 'Unknown'
-      quotes.push(newQuote.quote, newQuote.author);
+      newQuote.author = "Unknown"
+      quotes.push(newQuote);
       render();
     })
     .catch((err) => {
@@ -37,6 +37,7 @@ adviceBtn.addEventListener('click', () => {
   }
   buttonDelay();
 })
+
 inspireBtn.addEventListener('click', () => {
   // promise
   fetch("https://api.quotable.io/random")
@@ -49,7 +50,7 @@ inspireBtn.addEventListener('click', () => {
       let newQuote = {}
       newQuote.content = data.content
       newQuote.author = data.author
-      quotes.push(newQuote.content, newQuote.author);
+      quotes.push(newQuote);
       render();
     })
     .catch((err) => {
@@ -57,20 +58,33 @@ inspireBtn.addEventListener('click', () => {
     })
 })
 
+// button should show random quote from either API 
+luckyBtn.addEventListener('click', () => {
+  luckyQuote();
+  render();
+})
+
 // reset button
 resetBtn.addEventListener('click', init)
 
 // functions
 
+// function luckyQuote() {
+//   let newQuote = {}
+//   quotes.push(newQuote.advice, newQuote.content, newQuote.author)
+//   quotes[Math.floor(Math.random() * quotes.length)]
+//   console.log(newQuote)
+// }
+
 function appendDiv(quote, author) {
   let mainDiv = document.createElement('div')
-  // let inspireDiv = document.createElement('div')
-  mainDiv.innerHTML = ` <div class='card'>
-  <div class='card-body'>
-  <blockquote class='blockquote mb-0'>
-  <p>${quote}</p>
-  <footer class="blockquote-footer">${author}</footer>
-  </blockquote>
+  mainDiv.innerHTML = ` 
+  <div class='card'>
+    <div class='card-body'>
+      <blockquote>
+        <p class="mb-0">${quote}</p>
+          <footer class="blockquote-footer">${author}</footer>
+      </blockquote>
     </div>
   </div>
   `
@@ -80,8 +94,8 @@ function appendDiv(quote, author) {
 // to display everything on page 
 function render() {
   box.innerHTML = '';
-  quotes.forEach((quote, author) => {
-    appendDiv(quote, author)
+  quotes.forEach((quote) => {
+    appendDiv(quote.content, quote.author)
   })
 }
 

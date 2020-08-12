@@ -32,16 +32,10 @@ h2 {
 }
 
 .card {
-  display: flex;
-  justify-content: center;
   width: 95%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
-}
-
-.card-body {
-  padding: 30px;
 }
 
 form {
