@@ -48,7 +48,7 @@ inspireBtn.addEventListener('click', () => {
     // get content and author from array and push it into quote array
     .then((data) => {
       let newQuote = {}
-      newQuote.content = data.content
+      newQuote.quote = data.content
       newQuote.author = data.author
       quotes.push(newQuote);
       render();
@@ -95,7 +95,7 @@ function appendDiv(quote, author) {
 function render() {
   box.innerHTML = '';
   quotes.forEach((quote) => {
-    appendDiv(quote.content, quote.author)
+    appendDiv(quote.quote, quote.author)
   })
 }
 
