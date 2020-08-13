@@ -15,6 +15,7 @@ h2 {
   text-align: center;
   color: #030405;
   font-family: 'Mulish', sans-serif;
+  padding: 2px;
 }
 
 .box {
@@ -22,7 +23,7 @@ h2 {
   grid-template-columns: repeat(2, 1fr);
   margin-left: 18px;
   width: 100%;
-  padding: 20px;
+  padding: 15px;
 }
 
 .btn {
