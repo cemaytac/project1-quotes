@@ -5,7 +5,7 @@ const inspireBtn = document.getElementById('inspireButton')
 const adviceBtn = document.getElementById('adviceButton')
 // const luckyBtn = document.getElementById('luckyButton')
 const resetBtn = document.getElementById('resetButton')
-// const rssbtn = document.getElementById('rssbutton')
+const rssbtn = document.getElementById('rssbutton')
 
 // Variables
 const quotes = []
@@ -83,7 +83,6 @@ inspireBtn.addEventListener('click', () => {
 //   })
 // })
 
-// promise
 // rssbtn.addEventListener('click', () => {
 //   fetch("https://api.adviceslip.com/daily_adviceslip.rss")
 //     // return promise
