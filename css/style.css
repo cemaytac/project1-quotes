@@ -20,8 +20,9 @@ h2 {
 .box {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-top: 30px;
+  margin-left: 18px;
   width: 100%;
+  padding: 25px;
 }
 
 .btn {
@@ -41,7 +42,7 @@ h2 {
 }
 
 .card {
-  width: 95%;
+  width: 90%;
   margin: 20px 0;
   font-family: 'Noto Sans', sans-serif;
 }
@@ -71,33 +72,48 @@ footer {
 }
 
 @media only screen and (max-width: 830px) {
+  h1 {
+    font-size: 36px;
+  }
 
-  h1,
   h2 {
-    text-align: center;
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .box {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 10px;
-    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .btn {
     background-color: #00B0EF;
     display: flex;
     margin: 5px;
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
   }
 
   form {
     display: flex;
     justify-content: flex-end;
+    height: 30px;
     text-align: center;
     color: #030405;
+    position: relative;
+  }
 
+  label {
+    font-size: 12px;
+    font-family: 'Mulish', sans-serif;
+  }
+
+  .mb-0 {
+    font-size: 20px;
+  }
+
+  .blockquote-footer {
+    text-align: left;
+    font-size: 12px;
+    padding: 5px;
   }
 }
