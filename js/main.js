@@ -3,8 +3,9 @@
 const box = document.getElementById('boxDiv')
 const inspireBtn = document.getElementById('inspireButton')
 const adviceBtn = document.getElementById('adviceButton')
-const luckyBtn = document.getElementById('luckyButton')
+// const luckyBtn = document.getElementById('luckyButton')
 const resetBtn = document.getElementById('resetButton')
+const rssbtn = document.getElementById('rssbutton')
 
 // Variables
 const quotes = []
@@ -81,6 +82,23 @@ inspireBtn.addEventListener('click', () => {
 //     }
 //   })
 // })
+
+// promise
+rssbtn.addEventListener('click', () => {
+  fetch("https://api.adviceslip.com/daily_adviceslip.rss")
+    // return promise
+    .then((response) => {
+      return response.json();
+    })
+    // get advice from slip object, add into new newQuote array and push it into quotes array
+    .then((data) => {
+      console.log(data)
+    })
+    // for any bugs or errors
+    .catch((err) => {
+      console.log(err)
+    })
+})
 
 // reset button
 resetBtn.addEventListener('click', init)
