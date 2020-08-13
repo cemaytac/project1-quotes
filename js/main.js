@@ -17,7 +17,7 @@ adviceBtn.addEventListener('click', () => {
     .then((response) => {
       return response.json();
     })
-    // get advice from slip array and push it into quote array
+    // get advice from slip object, add into new newQuote array and push it into quotes array
     .then((data) => {
       let newQuote = {}
       newQuote.quote = data.slip.advice
@@ -25,6 +25,7 @@ adviceBtn.addEventListener('click', () => {
       quotes.push(newQuote);
       render();
     })
+    // for any bugs or errors
     .catch((err) => {
       console.log(err)
     })
@@ -45,14 +46,14 @@ inspireBtn.addEventListener('click', () => {
     .then((response) => {
       return response.json();
     })
-    // get content and author from array and push it into quote array
+    // get content and author from object, add into new newQuote array, and push it into quote array
     .then((data) => {
       let newQuote = {}
       newQuote.quote = data.content
       newQuote.author = data.author
       quotes.push(newQuote);
       render();
-    })
+    }) // for any bugs or errors
     .catch((err) => {
       console.log(err)
     })
@@ -86,6 +87,7 @@ resetBtn.addEventListener('click', init)
 
 // functions
 
+// to organize the contents of the API calls into divs
 function appendDiv(quote, author) {
   let mainDiv = document.createElement('div')
   mainDiv.innerHTML = ` 
