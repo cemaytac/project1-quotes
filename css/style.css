@@ -75,6 +75,17 @@ footer {
   padding-right: 5px;
 }
 
+#dailyQuote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: white;
+  width: 90%;
+  padding: 5px;
+  text-align: center;
+}
+
 @media only screen and (max-width: 830px) {
   h1 {
     font-size: 36px;
