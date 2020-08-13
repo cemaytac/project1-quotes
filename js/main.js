@@ -112,7 +112,7 @@ function appendDiv(quote, author) {
   <div class='card'>
     <div class='card-body'>
       <blockquote>
-        <p class="mb-0">${quote}</p>
+        <p class="mb-0">"${quote}"</p>
           <footer class="blockquote-footer">${author}</footer>
       </blockquote>
     </div>
