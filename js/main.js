@@ -59,27 +59,27 @@ inspireBtn.addEventListener('click', () => {
 })
 
 // button should show random quote from either API 
-luckyBtn.addEventListener('click', () => {
-  Promise.all([
-    fetch("https://api.quotable.io/random"),
-    fetch("https://api.adviceslip.com/advice")
-    // return promise
-  ]).then(async (responses) => {
-    try {
-      const data = await Promise.all(responses.map(function (response) {
-        return response.json()
-      }))
-      let newQuote = {}
-      newQuote.quote = data.advice
-      // newQuote.quote = data.content
-      // newQuote.author = data.author
-      quotes.push(newQuote)
-      console.log(newQuote)
-    } catch (err) {
-      console.log(err)
-    }
-  })
-})
+// luckyBtn.addEventListener('click', () => {
+//   Promise.all([
+//     fetch("https://api.quotable.io/random"),
+//     fetch("https://api.adviceslip.com/advice")
+//     // return promise
+//   ]).then(async (responses) => {
+//     try {
+//       const data = await Promise.all(responses.map(function (response) {
+//         return response.json()
+//       }))
+//       let newQuote = {}
+//       newQuote.quote = data.advice
+//       // newQuote.quote = data.content
+//       // newQuote.author = data.author
+//       quotes.push(newQuote)
+//       console.log(newQuote)
+//     } catch (err) {
+//       console.log(err)
+//     }
+//   })
+// })
 
 // reset button
 resetBtn.addEventListener('click', init)

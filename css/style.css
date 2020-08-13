@@ -2,10 +2,19 @@ body {
   background-color: rgb(1, 75, 1);
 }
 
-h1,
-h2 {
+h1 {
+  padding: 10px;
   text-align: center;
   color: #030405;
+  font-family: 'Mulish', sans-serif;
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+  text-align: center;
+  color: #030405;
+  font-family: 'Mulish', sans-serif;
 }
 
 .box {
@@ -33,9 +42,8 @@ h2 {
 
 .card {
   width: 95%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
+  margin: 20px 0;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 form {
@@ -43,6 +51,19 @@ form {
   justify-content: flex-end;
   text-align: center;
   color: #030405;
+}
+
+footer {
+  padding: 20px;
+  margin: 10px 0;
+  display: flex;
+  margin-bottom: auto;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+input {
+  size: 10px;
 }
 
 @media only screen and (max-width: 830px) {
@@ -74,9 +95,5 @@ form {
     text-align: center;
     color: #030405;
 
-  }
-
-  label {
-    font-size: 16px;
   }
 }
