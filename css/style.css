@@ -79,11 +79,21 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
+  margin: 20px auto;
   background-color: white;
-  width: 90%;
+  width: 20%;
   padding: 5px;
   text-align: center;
+}
+
+#paper {
+  display: flex;
+  justify-content: center;
+}
+
+#pattern {
+  width: 20%;
+  background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
 }
 
 @media only screen and (max-width: 830px) {
@@ -129,5 +139,16 @@ footer {
     text-align: left;
     font-size: 12px;
     padding: 1px;
+  }
+
+  #dailyQuote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: white;
+    width: 90%;
+    padding: 5px;
+    text-align: center;
   }
 }
