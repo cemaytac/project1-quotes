@@ -86,16 +86,6 @@ footer {
   text-align: center;
 }
 
-#paper {
-  display: flex;
-  justify-content: center;
-}
-
-#pattern {
-  width: 20%;
-  background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
-}
-
 @media only screen and (max-width: 830px) {
   h1 {
     font-size: 36px;

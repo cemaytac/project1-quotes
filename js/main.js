@@ -3,7 +3,6 @@
 const box = document.getElementById('boxDiv')
 const inspireBtn = document.getElementById('inspireButton')
 const adviceBtn = document.getElementById('adviceButton')
-// const luckyBtn = document.getElementById('luckyButton')
 const resetBtn = document.getElementById('resetButton')
 const rssbtn = document.getElementById('rssbutton')
 
@@ -59,45 +58,6 @@ inspireBtn.addEventListener('click', () => {
       console.log(err)
     })
 })
-
-// button should show random quote from either API 
-// luckyBtn.addEventListener('click', () => {
-//   Promise.all([
-//     fetch("https://api.quotable.io/random"),
-//     fetch("https://api.adviceslip.com/advice")
-//     // return promise
-//   ]).then(async (responses) => {
-//     try {
-//       const data = await Promise.all(responses.map(function (response) {
-//         return response.json()
-//       }))
-//       let newQuote = {}
-//       newQuote.quote = data.advice
-//       // newQuote.quote = data.content
-//       // newQuote.author = data.author
-//       quotes.push(newQuote)
-//       console.log(newQuote)
-//     } catch (err) {
-//       console.log(err)
-//     }
-//   })
-// })
-
-// rssbtn.addEventListener('click', () => {
-//   fetch("https://api.adviceslip.com/daily_adviceslip.rss")
-//     // return promise
-//     .then((response) => {
-//       return response.json();
-//     })
-//     // get advice from slip object, add into new newQuote array and push it into quotes array
-//     .then((data) => {
-//       console.log(data)
-//     })
-//     // for any bugs or errors
-//     .catch((err) => {
-//       console.log(err)
-//     })
-// })
 
 // reset button
 resetBtn.addEventListener('click', init)
