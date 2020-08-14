@@ -1,5 +1,7 @@
 body {
-  background-color: rgb(1, 75, 1);
+  background-image: url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&w=1000&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1 {
