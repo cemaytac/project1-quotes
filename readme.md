@@ -12,10 +12,10 @@ http://motivation-helper.surge.sh/
 - have users submit their own quotes or advice into the database
 - have a reset button to clear the page
 
-## Wireframes
+## Wireframe
 ![pic](https://i.imgur.com/9lWS7uC.png/to/img.png)
-
-
+![pic](https://i.imgur.com/YaU9ZEk.jpg/to/img.png)
+![pic](https://imgur.com/a/bgp6xtp/to/img.png)
 
 ## Tech Used
 - HTML
