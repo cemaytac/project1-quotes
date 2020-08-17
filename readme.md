@@ -17,7 +17,7 @@ http://motivation-helper.surge.sh/
 
 ## Screenshots
 ![pic](https://i.imgur.com/YaU9ZEk.jpg/to/img.png)
-![pic](https://imgur.com/a/bgp6xtp/to/img.png)
+![pic](https://i.imgur.com/wqoUlfj.jpg/to/img.png)
 
 ## Tech Used
 - HTML
